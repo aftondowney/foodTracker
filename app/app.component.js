@@ -25,10 +25,13 @@ System.register(['angular2/core'], function(exports_1, context_1) {
                         new Food("salad", "no dressing", 250, 0),
                     ];
                 }
+                AppComponent.prototype.foodWasSelected = function (clickedFood) {
+                    console.log(clickedFood);
+                };
                 AppComponent = __decorate([
                     core_1.Component({
                         selector: 'my-app',
-                        template: "\n  <div class=\"container\">\n    <h1>Food Tracker</h1>\n    <h3>{{ food.name }}</h3>\n  </div>\n  "
+                        template: "\n  <div class=\"container\">\n    <h1>Food Tracker</h1>\n      <h3 *ngFor=\"#food of foods\" (click)=\"foodWasSelected(food)\">{{ food.description }}</h3>\n  </div>\n  "
                     }), 
                     __metadata('design:paramtypes', [])
                 ], AppComponent);
