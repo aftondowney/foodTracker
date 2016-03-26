@@ -1,30 +1,29 @@
-import { Component } from 'angular2/core';
+import { Component, EventEmitter } from 'angular2/core';
+import {FoodListComponent} from './food-list.component';
+import {Food} from './food.model';
 
 @Component({
   selector: 'my-app',
+  directives: [FoodListComponent],
   template: `
-  <div class="container">
-    <h1>Food Tracker</h1>
-      <h3 *ngFor="#food of foods" (click)="foodWasSelected(food)">{{ food.description }}</h3>
-  </div>
+    <div class="container">
+      <h1>Food Tracker</h1>
+      <food-list
+      [foodList]="foods"
+      (onFoodSelect)="foodWasSelected($event)">
+      </food-list>
+    </div>
   `
 })
-
 export class AppComponent {
-  public foods: Food[];
+  public foods: Food[];  // Food[] (or Array<Food>) identifies foods as an array of Food objects
   constructor(){
     this.foods = [
-      new Food("pizza", "It had veggies.", 500, 0),
-      new Food("salad", "no dressing", 250, 0),
+      new Food("Pizza", "It was veggie at least.", 500),
+      new Food("Salad", "No dressing", 200),
     ];
   }
   foodWasSelected(clickedFood: Food): void {
     console.log(clickedFood);
-  }
-}
-
-export class Food {
-  constructor(public name: string, public details: string, public calories: number, public id: number){
-
   }
 }
