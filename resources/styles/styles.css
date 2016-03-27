@@ -1,3 +1,48 @@
-h1 {
-  color: blue;
+/*index.html*/
+body {
+  color: #0272a2;
+}
+/*food-list.component*/
+.jumbotron {
+  text-align: center;
+  background-color: #ca0b03;
+  color: #88cada;
+}
+h3 {
+  text-decoration: underline;
+  margin-bottom: 25px;
+}
+food-display:hover {
+  color: #9fc377;
+}
+.selected {
+  color: #d7c703;
+}
+/*new-food.component*/
+.add-food {
+  margin-bottom: 10px;
+}
+button {
+  background-color: #d7c703;
+}
+/*edit-food-details.component*/
+.food-details {
+  text-align: center;
+}
+.input-margin {
+  margin-top: 6px;
+  margin-bottom: 6px;
+  text-align: left;
+  background-color: #9fc377;
+}
+.labels {
+  text-align: right;
+  color: #ca0b03;
+}
+.panel {
+  margin-top: 25px;
+}
+.panel-default > .panel-heading {
+  background-color: #0272a2;
+  color: #9fc377;
 }
