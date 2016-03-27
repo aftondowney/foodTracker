@@ -28,6 +28,5 @@ export class NewFoodComponent {
     userName.value = "";
     userDetails.value = "";
     userCalories.value = "";
-
   }
-  }
+}
