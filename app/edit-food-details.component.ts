@@ -5,17 +5,30 @@ import {Food} from './food.model';
   selector: 'edit-food-details',
   inputs: ['food'],
   template: `
-    <h3>Selected Food: {{ food.name}}</h3>
-    <div class="col-sm-6">
-    <li><h4>Name: {{ food.name }}</h4></li>
-    <li><h4>Details: {{ food.details }}</h4></li>
-    <li><h4>Calories: {{ food.calories }}</h4></li>
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h3 class="food-details">{{ food.name}} Details</h3>
     </div>
-    <div class="col-sm-6 food-form">
-    <label class="edit-label">Edit Name:</label><input [(ngModel)]="food.name"/><br>
-    <label class="edit-label">Edit Details:</label><input [(ngModel)]="food.details"/><br>
-    <label class="edit-label">Edit Calories:</label><input [(ngModel)]="food.calories"/>
+    <div class="panel-body">
+      <div class="col-sm-2"></div>
+      <div class="col-sm-4">
+        <li><h4>{{ food.name }}</h4></li>
+        <li><h4>{{ food.details }}</h4></li>
+        <li><h4>{{ food.calories }} calories</h4></li>
+      </div>
+      <div class="col-sm-2 labels">
+        <label class="edit-label"><h5>Edit Name:</h5></label>
+        <label class="edit-label"><h5>Edit Details:</h5></label>
+        <label class="edit-label"><h5>Edit Calories:</h5></label>
+      </div>
+      <div class="col-sm-2">
+        <input class="input-margin" [(ngModel)]="food.name"/><br>
+        <input class="input-margin" [(ngModel)]="food.details"/><br>
+        <input class="input-margin" [(ngModel)]="food.calories"/>
+      </div>
+      <div class="col-sm-2"></div>
     </div>
+  </div>
   `
 })
 export class EditFoodDetailsComponent {

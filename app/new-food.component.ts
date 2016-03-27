@@ -5,13 +5,11 @@ import {Food} from './food.model';
   selector: 'new-food',
   outputs: ['onSubmitNewFood'],
   template: `
-    <div class="col-sm-6">
       <h3>Add Food</h3>
-      <input placeholder="Name" #newName><br>
-      <input placeholder="Details" #newDetails><br>
-      <input type="number" placeholder="Calories" #newCalories><br>
+      <input class="add-food" placeholder="Name" #newName><br>
+      <input class="add-food" placeholder="Details" #newDetails><br>
+      <input class="add-food" type="number" placeholder="Calories" #newCalories><br>
       <button (click)="addFood(newName, newDetails, newCalories)">Add</button>
-    </div>
   `
 })
 export class NewFoodComponent {
