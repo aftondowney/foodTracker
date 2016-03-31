@@ -16,14 +16,15 @@ _This app will allow a user to make a log of everything they eat during a day. T
 * _Sass_
 
 1. clone repo
-2. npm install
-3. bower install
-4. install globals if needed (gulp, bower, sass, typescript, typescript packages.)
+2. install globals if needed (gulp, bower, sass, typescript, typescript packages.)
+  * node install -g
   * npm install gulp -g
   * npm install bower -g
   * gem install sass
   * npm install typescript -g
   * apm install atom-typescript
+3. npm install
+4. bower install
 5. gulp build
 6. gulp serve
 
